@@ -1,13 +1,13 @@
-\section{Especificación de la arquitectura Q}\label{apendiceQ}
+\parte{Especificación de la arquitectura Q}\label{apendiceQ}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Características generales} 
+\section{Características generales} 
 
 La Arquitectura Q tiene 8 registros de uso general de 16 bits, denominados R0..R7, registros especiales de 16 bits tales como PC - \textit{Program counter}, SP\footnote{Comienza en la dirección FFEF.} - \textit{Stack Pointer} y los Flags de un bit como Negative, oVerflow, Carry, Zero. 
 
 Por ultimo tiene una Memoria Principal con direcciones de 16 bit, donde el tamaño de cada celda también es de 16 bit. Entonces la memoria tiene un tamaño de 65536 celdas. \\ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Modos de direccionamiento}
+\section{Modos de direccionamiento}
 Los siguientes son los modos de direccionamiento implementados en la Arquitectura \Q.
 \begin{enumerate}
 
@@ -64,14 +64,14 @@ Registro indirecto &  110rrr\\ \hline
 }{\label{tablamodos}Tabla de códigos de los modos de direccionamiento (Nota: rrr describe el número de registro)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Repertorio de instrucciones}
+\section{Repertorio de instrucciones}
 En esta sección se detalla cómo se construye el código máquina de las instrucciones de la arquitectura.\\
 
 Todas las instrucciones alteran los flags excepto MOV, CALL, RET, JMP y los saltos condicionales. De las instrucciones que alteran los Flags, todas dejan C y V en 0 a excepción de ADD, SUB y CMP.  \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Instrucciones de 2 operandos}
+\subsection{Instrucciones de 2 operandos}
 
 A continuación se muestra la codificación (formato) de las instrucciones de dos operandos:
 
@@ -109,7 +109,7 @@ Esta instrucción describe la disyunción bit a bit entre los datos de los dos o
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Instrucciones de 1 operando origen}
+\subsection{Instrucciones de 1 operando origen}
 
 El formato de las instrucciones de un operando origen es el siguiente:\\
 
@@ -127,7 +127,7 @@ El efecto del JMP es cambiar el PC (Program Counter) por el dato que esta guarda
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Instrucciones de 1 operando destino}
+\subsection{Instrucciones de 1 operando destino}
 
 El formato de las instrucciones de un operando destino es el siguiente:\\
 
@@ -142,7 +142,7 @@ Esta instrucción describe la operación lógica "negación" bit a bit en el dat
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Instrucciones sin operandos}
+\subsection{Instrucciones sin operandos}
 
 El formato de las instrucciones sin operandos es el siguiente:\\
 
@@ -156,7 +156,7 @@ El efecto del ret es cambiar el pc por el dato que esta guardado en la celda de 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Instrucciones de salto condicional  (falta revisar Mara)}
+\subsection{Instrucciones de salto condicional  (falta revisar Mara)}
 
 El formato de las instrucciones de salto condicional es el siguiente:\\
 
