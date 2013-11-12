@@ -1,13 +1,37 @@
 \section{Como utilizar el simulador}
 
-En esta sección se describen las opcciones básicas del uso de la aplicación.
+En esta sección se describen las opciones básicas del uso de la aplicación.
+
+\subsubsection{Encender el Simulador QSim}
+Para poder arrancar el simulador contamos con 2 archivos ejecutables. 
+Dependiendo del sistema operativo en el que estemos utilizamos uno u otro.\\
+
+A Continuación se describirá como se ejecuta el simulador QSim tanto en Windows como en Linux.
+\begin{itemize}
+
+\item Encender QSim en Linux.
+
+En Linux tenemos que fijarnos cuantos bits tiene el sistema operativo (32bits o 64bits). Si es de 32bits, el .jar que tenemos que utilizar para el ejecutable tiene que estar generado en 32bits y a si mismo sucede con el sistema en 64bit. El ejecutable para linux tiene extension .sh. El comando para encender el simulador es la siguiente:
+
+\begin{verbatim}
+- sh qsim.sh
+\end{verbatim}
+
+Este comando nos lleva a la pantalla principal de Qsim, la cual se muestra mas adelante.
+\item Encender QSim en Windows.
+
+En Windows utilizaremos uno de los ejecutables, para ser mas precisos el archivo ejecutable con extension .bat.
+A dicho archivo le hacemos doble clic para poder encender el simulador que nos lleva a la pantalla principal QSim.
+
+ 
+\end{itemize}
 
 \subsubsection{Agregar archivos}
-Como se observa en screenshot la ventana de cargado la misma cuenta con la opcción de agregar archivos .qsim y se encuentran desabilitadas las otras opcciones ya que, sin uno o mças programas de la arquitectura Qi carece de sentido realizar la acción de ensamblar o de cargar en memoria.
+Como se observa en screenshot la ventana de cargado la misma cuenta con la opción de agregar archivos .qsim y se encuentran deshabilitadas las otras opciones ya que, sin uno o mas programas de la arquitectura Qi carece de sentido realizar la acción de ensamblar o de cargar en memoria.
 \graf{ventana_cargado}{Cargado de archivos}
 
 \subsubsection{Ensamblar}
-Como se observa en screenshot de la ventana Ensamblar una vez que los programas Qi en los archivos -qsim se encuentran agregados se habilitan las opcciones de seleccionar la arquitectura Qi que se desee (Q1.. Q6) y la opcción de Ensamblar el programa para que se realice el chequeo de sintáxis y se genere el código máquina que luego será cargado en memoria.
+Como se observa en screenshot de la ventana Ensamblar una vez que los programas Qi en los archivos -qsim se encuentran agregados se habilitan las opciones de seleccionar la arquitectura Qi que se desee (Q1.. Q6) y la opción de Ensamblar el programa para que se realice el chequeo de sintaxis y se genere el código máquina que luego será cargado en memoria.
 
 \graf{ventana_cargado_ensambar}{Ensamblar}
 
