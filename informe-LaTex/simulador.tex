@@ -44,7 +44,7 @@ Se provee la funcionalidad de la ejecución paso a paso ya que se desea que el a
 \item \textbf{Búsqueda de instrucción:} El alumno podrá visualizar el valor que contiene PC (Program counter) donde se encuentra la dirección de la celda en memoria que contiene la próxima instrucción a ejecutar (por ejemplo, en caso de ser la primer instrucción del programa recién cargado, el pc tendrá la dirección de memoria elegida por el alumno para iniciar el cargado del programa en memoria). El simulador, toma de la memoria el código maquina correspondiente a la instrucción que comienza en esa dirección tomada de PC (una instrucción puede ocupar más de una celda de memoria) y los guarda en el \IR\ (\textit{Instruction Register}). Será observable también para el alumno el incremento del registro PC, tanto como celdas ocupe la instrucción actual, lo que conceptualmente es, preparar el contexto de ejecución para tomar la siguiente instrucción.
 
 \item  \textbf{Decodificación:}
-En la decodificación el interprete se encarga de desensamblar el código máquina (abreviado en hexadecimal) que ya fue ubicado en el \IR\ para mostrar el código fuente de la instrucción actual con sus respectivos operandos. Si el programa escrito por el alumno es sintacticamente y conceptualmente correcto, este paso le permite comprobar que la instrucción actual es la que él mismo escribió y no otra, visualizandola en pantalla. \\
+En la decodificación el interprete se encarga de desensamblar el código máquina (abreviado en hexadecimal) que ya fue ubicado en el \IR\ para mostrar el código fuente de la instrucción actual con sus respectivos operandos. Si el programa escrito por el alumno es sintacticamente y conceptualmente correcto, este paso le permite comprobar que la instrucción actual es la que él mismo escribió y no otra, visualizándola en pantalla. \\
 
 La decodificación con desensamblado, es decir con la reconstrucción del código fuente, permite al alumno experimentar otros escenarios y efectos laterales, entre los cuales podemos enumerar:
 
@@ -75,10 +75,10 @@ En la presente sección se indica la tecnología elegida para la implementación
 Elegimos el lenguaje Scala para realizar el simulador ya que durante las cursadas de las asignaturas de TPI no tuvimos la oportunidad de profundizar el dominio de este lenguaje ni aprovechar las ventajas que este ofrecía al combinar el manejo de objetos y las características de un lenguaje funcional. Es por ello que descartamos la elección de un lenguaje con el que estábamos mas familiarizadas, como por ejemplo Java.
 
 \item  \textbf{Framework Arena.}
-Utilizamos el framework Arena para realizar la interfaz de usuario del simulador porque es una herramienta de código abierto que tuvimos la oportunidad de conocer en la materia \ui. Al poder ser combinado con \textbf{Scala} nos pareció una buena oportunidad de explotar lo que nos ofrecía para simplificar la definición de la interfaz de usuario, permitiéndonos así enforcarnos en la implementación del modelo. 
+Utilizamos el framework Arena para realizar la interfaz de usuario del simulador porque es una herramienta de código abierto que tuvimos la oportunidad de conocer en la materia \ui. Al poder ser combinado con \textbf{Scala} nos pareció una buena oportunidad de explotar lo que nos ofrecía para simplificar la definición de la interfaz de usuario, permitiéndonos así enfocarnos en la implementación del modelo. 
 
 \item  \textbf{Eclipse.}
-Se eligió utilizar el entorno de programación Eclipse ya que es una herramienta multiplataforma, lo que nos permitió trabajar en diferentes sistemas operativos y con la cual estábamos familizadas.  Por otro lado, la comunidad provee pluggins para manejar proyectos para Scala.
+Se eligió utilizar el entorno de programación Eclipse ya que es una herramienta multiplataforma, lo que nos permitió trabajar en diferentes sistemas operativos y con la cual estábamos familiarizadas.  Por otro lado, la comunidad provee pluggins para manejar proyectos para Scala.
 
 \item  \textbf{Git}
 Elegimos git como repositorio externo para trabajar colaborativamente durante el desarrollo, dado que es una herramienta que muy extendida en los desarrollos de software libre.
@@ -195,7 +195,7 @@ Como se observa en la figura \ref{Programa} la clase Programa conoce un grupo de
 
 \subsubsection{Simulador}
 
-Esta e la clase principal del modelo y la encargada de coordinar la ejecución del programa paso a paso. Como se observa en la figura \ref{simulador} la clase \textbf{Simulador} conoce a una instancia de la clase \textbf{CPU}, a una instancia de la clase \textbf{BusEntradaSalida} y a una intancia de la clase \textbf{Instruccion}, que representa a la instrucción que se esta ejecutando en ese momento.\\
+Esta es la clase principal del modelo y la encargada de coordinar la ejecución del programa paso a paso. Como se observa en la figura \ref{simulador} la clase \textbf{Simulador} conoce a una instancia de la clase \textbf{CPU}, a una instancia de la clase \textbf{BusEntradaSalida} y a una instancia de la clase \textbf{Instruccion}, que representa a la instrucción que se esta ejecutando en ese momento.\\
 
 La clase Simulador tiene la responsabilidad de obtener el \codmaq\ de la siguiente instrucción, colaborando con el Interprete (ver \ref{claseinterprete}), calcular las etiquetas de un programa, cargar el programa en memoria y los datos en registros,  ejecutar las instrucciones o delegar su ejecución al objeto \textbf{ALU} que conoce a través de la \textbf{CPU} según corresponda, y guardar datos en memoria o registros (almacenamiento de resultados).
 

@@ -31,8 +31,8 @@ La \UC\ dirige el ciclo de ejecución de cada instrucción, pidiendo la lectura 
 
 Entre los registros de uso específico, los más importantes son el \textbf{\PC}, el \textbf{\IR}, el \textbf{\SP} y los \textbf{\FLAGS}. El \PC\ es un registro que indica la posición de memoria donde estará la siguiente instrucción que debe ejecutarse. Luego de completar el ciclo de ejecución de una instrucción, el PC se incrementa en función de la cantidad de celdas que ocupa el código máquina de esta. 
 El registro de instrucción, \textbf{\IR}, contiene el código máquina de la instrucción actual una vez que la misma es leída de memoria para luego decodificarla y ejecutarla.
-El \SP\ es un registro que indica la posición de memoria donde está el dato que representa a la última direccion de memoria que fue guardada al llamar a una sub-rutina, para que cuando esta termine, el programa pueda seguir ejecutandose a partir de ese punto.
-Los \FLAGS\ representan carateristicas del último computo realizado como si el resultado fue negativo, cero, etc.
+El \SP\ es un registro que indica la posición de memoria donde está el dato que representa a la última dirección de memoria que fue guardada al llamar a una sub-rutina, para que cuando esta termine, el programa pueda seguir ejecutándose a partir de ese punto.
+Los \FLAGS\ representan características del último computo realizado como si el resultado fue negativo, cero, etc.
 
 El diseño de cada arquitectura ofrece un conjunto diferente de registros de uso general para ser usados en los programas. Estos registros son elementos de memoria de alta velocidad y poca capacidad que pueden ser utilizados como variables en los programas. Es importante marcar que pueden almacenar tanto datos como direcciones de memoria.\\
 
@@ -44,7 +44,7 @@ El bus de sistema es el encargado de transferir los datos entre los componentes 
 
 \subsection{Ejecución de un programa}
 
-La función de una computadora es la ejecución de programas. Los programas se encuentran almacenados en memoria y consisten en una secuencia de instrucciones y es la \UC\ es quien se encarga de ejecutar dichas instrucciones implementando un \textbf{\ciclo}. Para ser almacenadas en memoria, las instrucciones deben codificarse en cadenas binarias (secuencias de ceros y unos) que no son legibles para las personas pero son tales que la \UC\ las puede interpretar y traducir en acciones. Por eso para saber de qué instrucción se trata, y cuáles son los valores o variables (celdas de memoria o registros) que estan involucrados, la \UC\ toma el código máquina de la instrucción y verifica los códigos de operación y modos de direccionamiento. La ejecución de instrucciones se divide en tres etapas importantes: 
+La función de una computadora es la ejecución de programas. Los programas se encuentran almacenados en memoria y consisten en una secuencia de instrucciones y es la \UC\ es quien se encarga de ejecutar dichas instrucciones implementando un \textbf{\ciclo}. Para ser almacenadas en memoria, las instrucciones deben codificarse en cadenas binarias (secuencias de ceros y unos) que no son legibles para las personas pero son tales que la \UC\ las puede interpretar y traducir en acciones. Por eso para saber de qué instrucción se trata, y cuáles son los valores o variables (celdas de memoria o registros) que están involucrados, la \UC\ toma el código máquina de la instrucción y verifica los códigos de operación y modos de direccionamiento. La ejecución de instrucciones se divide en tres etapas importantes: 
 
 \begin{enumerate}
 \item \BI

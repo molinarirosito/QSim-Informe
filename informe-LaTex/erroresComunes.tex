@@ -72,7 +72,7 @@ MUL [R6], r4
 ADD [0xF0F0], R0
 \end{verbatim}
 
-En la linea numero 1 el operando origen es un registro escrito con minúscula, esto es invá lido(La sintáxis define que los registros empiezan estrictamente con 'R'' mayúscula). Cuando se quiera ensamblar este programa, el ensamblador detectara este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
+En la linea numero 1 el operando origen es un registro escrito con minúscula, esto es inválido(La sintáxis define que los registros empiezan estrictamente con 'R'' mayúscula). Cuando se quiera ensamblar este programa, el ensamblador detectara este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
 
 \mensaje{Ha ocurrido un error en la linea 1: MUL [R6], r4} 
 
@@ -171,7 +171,7 @@ En la linea numero 1 el operando destino no esta incompleto (El modo de direccio
 JMP
 \end{verbatim}
 
-En la linea numero 1 sólo esta escrito el nombre de la instruccion JMP pero falta a continuación su el operando origen. Cuando se quiera ensamblar este programa, el ensamblador detectará este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
+En la linea numero 1 sólo esta escrito el nombre de la instrucción JMP pero falta a continuación su el operando origen. Cuando se quiera ensamblar este programa, el ensamblador detectará este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
 
 \mensaje{Ha ocurrido un error en la linea 1: JMP} 
  
