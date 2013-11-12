@@ -6,18 +6,23 @@
 
 
 \pagestyle{fancy}
-\fancyhead{} % limpio la cabecera
-\fancyhead[R]{\nouppercase{\rightmark}}
+\fancyhead{} % limpio la cabecera\nouppercase{\rightmark}
+
+
+%\renewcommand{\sectionmark}[1]{\markright{#1}{}}
 \fancyhead[L]{\nouppercase{\leftmark}}
+
+\fancyhead[R]{ \thepage}
+%\fancyhead[L]{\nouppercase{\leftmark \sectiontitle}}
 \fancyfoot[C]{\includegraphics[width=2cm]{logo}}
-\fancyfoot[R]{\thepage}
+\fancyfoot[R]{}
 
 \begin{document}
 \maketitle
 
-\newpage
+%\newpage
 \input{introduccion}
-\newpage
+%\newpage
 \tableofcontents
 
 \newpage

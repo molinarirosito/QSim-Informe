@@ -2,7 +2,7 @@
 
 En esta sección se describen las opciones básicas del uso de la aplicación.
 
-\subsubsection{Arranque del Simulador QSim}
+\section{Arranque del Simulador QSim}
 Para poder arrancar el simulador contamos con 2 archivos ejecutables. 
 Dependiendo del sistema operativo en el que estemos utilizamos uno u otro.\\
 
@@ -28,21 +28,21 @@ A dicho archivo le hacemos doble clic para poder encender el simulador que nos l
  
 \end{itemize}
 
-\subsection{Agregar archivos}
+\section{Agregar archivos}
 Como se observa en la figura \ref{ventana_cargado}, la ventana de cargado, la misma cuenta con la opción de agregar archivos .qsim y se encuentran deshabilitadas las otras opciones ya que, sin uno o mas programas de la arquitectura Qi carece de sentido realizar la acción de ensamblar o de cargar en memoria.
 \graf{ventana_cargado}{Cargado de archivos}
 
-\subsection{Ensamblar}
+\section{Ensamblar}
 Como se observa en la figura \ref{ventana_cargado_ensamblar} de la ventana Ensamblar una vez que los programas Qi en los archivos -qsim se encuentran agregados se habilitan las opciones de seleccionar la arquitectura Qi que se desee (Q1.. Q6) y la opción de Ensamblar el programa para que se realice el chequeo de sintaxis y se genere el código máquina que luego será cargado en memoria.
 
 \graf{ventana_cargado_ensamblar}{Ensamblar}
 
-\subsection{Cargar en memoria}
+\section{Cargar en memoria}
 Como se observa en la figura \ref{ventana_cargado_cargarenmemoria} de \textit{cargado en memoria} los programas Qi en los archivos .qsim se encuentran ensamblados en la arquitectura Qi elegida.\\
 Para ese entonces todas las opciones están habilitadas ya que puede desearse agregar otro archivo .qsim o quitar alguno (no todos) y volver a ensamblar, o bien, elegir el \PC a partir del cual se quiere cargar en memoria el programa Qi (por defecto '0000') y hacer clic en el botón 'Cargar en memoria'.
 \graf{ventana_cargado_cargarenmemoria}{Cargado en memoria}
 
-\subsection{Ciclo de instruccion}
+\section{Ciclo de instruccion}
 Como se observa en la figura \ref{ventana_ejecucion} de la ventana de ejecución una vez que el programa es exitosamente cargado en memoria se abre esta nueva ventana que contiene los registro especiales \PC, \IR, \SP, los flags, los registro de uso general (R0...R7), la memoria, una consola de información al usuario y los botones habilitados para realizar el fetch, ver los puertos y editar los valores de los registros especiales, los flags y pc.
 
 \graf{ventana_ejecucion}{Ventana de ejecución}
@@ -53,7 +53,7 @@ Para poder realizar el ciclo de ejecución de una instrucción, se debe seguir e
 \graf{ventana_ejecucion_decode}{Ventana de ejecución luego del \textit{decode}}
 \graf{ventana_ejecucion_execute}{Ventana de ejecución luego del \textit{execute}}
 
-\subsection{Visualización de puertos}
+\section{Visualización de puertos}
 Si se desea ver el valor que tienen los puertos, basta con hacer clic en el botón "Ver puertos", y se abrirá una nueva ventana tal y como se ve en el \textit{screenshot} de la ventana de puertos (figura \ref{ventana_puertos}) donde se podrá observar el número de puerto y su valor actual y también al igual que en la ventana principal seleccionar su edición.
 \graf[6cm]{ventana_puertos}{Ventana de puertos}\\
 

@@ -8,9 +8,9 @@ El simulador desarrollado es una herramienta de utilización sencilla ya que se 
 La funcionalidad del simulador puede caracterizarse mediante las siguientes partes importantes:
 
 \begin{itemize}
-\item Chequeo de sintaxis de los programas escritos en el lenguaje Q
+\item Chequeo de sintaxis de los programas escritos en un lenguaje Qi
 \item Ensamblado del código fuente de un programa en su correspondiente código máquina
-\item Cargado en memoria del código máquina
+\item Cargado en memoria del código máquina de un programa
 \item Ejecución paso a paso de un programa cargado en memoria
 \end{itemize}
 
@@ -18,21 +18,25 @@ La funcionalidad del simulador puede caracterizarse mediante las siguientes part
 
 El simulador provee al alumno de un editor de texto en el cual escribirá el programa en un lenguaje Qi, que desea cargar en memoria y ejecutar.
 Una vez que el usuario haya terminado la escritura, al momento de cargar el programa, el simulador utilizará un \textit{parser}\footnote{Un \textit{parser} (o analizador sintáctico) es una de las partes del compilador que transforma su entrada de texto plano en este caso a objetos del modelo.} para detectar errores de sintaxis, tales como la falta de una coma o un corchete, o la presencia de símbolos que no pertenecen al lenguaje (como por ejemplo signos de pregunta y símbolos matemáticos); o bien errores semánticos como la combinación incorrecta de elementos del lenguaje, por ejemplo: modos de direccionamiento mal ubicados.
-El \textit{parser} solo revisará lo escrito por el alumno y de acuerdo a las gramática del lenguaje, mostrará alguno de los siguientes estados:
+El \textit{parser} controlará el código escrito por el alumno y de acuerdo a la gramática del lenguaje correspondiente a la versión \qi\ elegida elegido, mostrará alguno de los siguientes estados:
 
 \begin{description}
 \item[OK] Este mensaje se obtiene cuando no hubo ningún error de sintaxis. Si se da este resultado, es posible continuar con el ensamblado y cargado en memoria.
-\item[SyntaxError] Este mensaje de error se obtiene cuando en alguna línea del programa se detectó algún error de sintaxis o de semántica, como se describió arriba. Cuando ocurre este error se lo acompaña con una descripción lo mas detallada posible para que el alumno detecte donde ocurrió y pueda corregirlo. Un programa con errores no puede ser ensamblado y cargado en memoria.
+\item[SyntaxError] Este mensaje de error se obtiene cuando en alguna línea del programa se detectó algún error de sintaxis o de semántica, como se describió arriba. Cuando ocurre este error se lo acompaña con una descripción lo mas detallada posible para que el alumno detecte donde ocurrió y pueda corregirlo. Un programa con errores no puede ser ensamblado y cargado en memoria. Mas detalle de esto puede encontrarse en el apéndice \ref{erroressintaxis}.
 \end{description}
 
 \subsection{Ensamblado}
 
 Una vez que el programa es sintácticamente válido es posible traducir el código fuente del programa en código máquina (representado en cadenas binarias). Para esto se respeta un formato de instrucción que indica cómo se codifica cada operación y los operandos. \\
+Por ejemplo, la una instrucción \codecent{ADD [AAAA],0x000F} suma el valor 15 al contenido de la celda cuya dirección es \code{AAAA}, y el resultado de ensamblar esta celda es el siguiente código máquina: \codecent{0010001000000000 1010101010101010 0000000000001111}
+
 Mas detalle al respecto de este proceso en el apéndice \ref{apendiceQ}.
 
 \subsection{Cargado en memoria}
 
 Una vez ensamblado, la representación binaria (o código máquina) del programa será cargado en memoria a partir de una ubicación (celda de memoria) que el alumno puede elegir. Esto permite visualizar el contenido de la memoria (con el programa cargado) y el estado de los registros de la CPU. 
+
+Por ejemplo, si el código máquina de una instrucción es:\codecent{0010001000000000 1010101010101010 0000000000001111} entonces durante el cargado en memoria se ocuparán 3 celdas (de 16 bits) consecutivas.
 
 Durante la carga del programa en memoria puede ocurrir que el programa no cuente con el espacio suficiente a partir de la ubicación elegida ya que ocupa más celdas que las que se encuentran disponibles, ya que como se especifica en el apéndice \ref{apendiceQ}, la memoria disponible tiene un tamaño limitado y por este motivo la alocación en memoria del código máquina puede exceder el espacio disponible a partir de la celda inicial anteriormente elegida. Si por el contrario, no se produce este error, el alumno podrá ver el programa cargado en memoria exitosamente.
 
@@ -44,9 +48,9 @@ Se provee la funcionalidad de la ejecución paso a paso ya que se desea que el a
 \item \textbf{Búsqueda de instrucción:} El alumno podrá visualizar el valor que contiene PC (Program counter) donde se encuentra la dirección de la celda en memoria que contiene la próxima instrucción a ejecutar (por ejemplo, en caso de ser la primer instrucción del programa recién cargado, el pc tendrá la dirección de memoria elegida por el alumno para iniciar el cargado del programa en memoria). El simulador, toma de la memoria el código maquina correspondiente a la instrucción que comienza en esa dirección tomada de PC (una instrucción puede ocupar más de una celda de memoria) y los guarda en el \IR\ (\textit{Instruction Register}). Será observable también para el alumno el incremento del registro PC, tanto como celdas ocupe la instrucción actual, lo que conceptualmente es, preparar el contexto de ejecución para tomar la siguiente instrucción.
 
 \item  \textbf{Decodificación:}
-En la decodificación el interprete se encarga de desensamblar el código máquina (abreviado en hexadecimal) que ya fue ubicado en el \IR\ para mostrar el código fuente de la instrucción actual con sus respectivos operandos. Si el programa escrito por el alumno es sintacticamente y conceptualmente correcto, este paso le permite comprobar que la instrucción actual es la que él mismo escribió y no otra, visualizándola en pantalla. \\
+En la decodificación el simulador se encarga de desensamblar el código máquina (abreviado en hexadecimal) que ya fue ubicado en el \IR\ para mostrar el código fuente de la instrucción actual con sus respectivos operandos. Si el programa escrito por el alumno es sintacticamente y conceptualmente correcto, este paso le permite comprobar que la instrucción actual es la que él mismo escribió y no otra, visualizándola en pantalla. \\
 
-La decodificación con desensamblado, es decir con la reconstrucción del código fuente, permite al alumno experimentar otros escenarios y efectos laterales, entre los cuales podemos enumerar:
+Esta decodificación con desensamblado, es decir con la reconstrucción del código fuente, permite al alumno experimentar otros escenarios y efectos laterales, entre los cuales podemos enumerar:
 
 \begin{itemize}
 \item Si la ejecución paso a paso excede los límites del programa, pueden tomarse instrucciones de otra rutina y procesarse como una nueva instrucción.
@@ -56,7 +60,7 @@ La decodificación con desensamblado, es decir con la reconstrucción del códig
 
 Mas detalle de estas situaciones en la sección \ref{erroresconceptuales}.
 
-\item  \textbf{Ejecución}
+\item  \textbf{Ejecución:}
 La ejecución lleva a cabo los efectos de la instrucción y muestra en pantalla los cambios en el estado de ejecución: contenidos de memoria, puertos, registros y flags. Esto quiere decir que es en esta etapa cuando se lleva a cabo el almacenamiento de resultados que, si es necesario, guardará el valor resultante de la operación descripta por la instrucción en el operando destino. Esto cambiará el valor de una celda de memoria o de un registro y será visto en pantalla por el alumno.
 \end{enumerate}
 
@@ -72,16 +76,16 @@ En la presente sección se indica la tecnología elegida para la implementación
 
 
 \item  \textbf{Lenguaje Scala.}
-Elegimos el lenguaje Scala para realizar el simulador ya que durante las cursadas de las asignaturas de TPI no tuvimos la oportunidad de profundizar el dominio de este lenguaje ni aprovechar las ventajas que este ofrecía al combinar el manejo de objetos y las características de un lenguaje funcional. Es por ello que descartamos la elección de un lenguaje con el que estábamos mas familiarizadas, como por ejemplo Java.
+Se eligió el lenguaje Scala para realizar el simulador ya que durante las cursadas de las asignaturas de TPI no se tiene la oportunidad de profundizar en el dominio de este lenguaje ni aprovechar las ventajas que este ofrecía al combinar el manejo de objetos y las características de un lenguaje funcional. Es por ello que se descartó la posibilidad de utilizar un lenguaje mas extendido, como por ejemplo Java.
 
 \item  \textbf{Framework Arena.}
-Utilizamos el framework Arena para realizar la interfaz de usuario del simulador porque es una herramienta de código abierto que tuvimos la oportunidad de conocer en la materia \ui. Al poder ser combinado con \textbf{Scala} nos pareció una buena oportunidad de explotar lo que nos ofrecía para simplificar la definición de la interfaz de usuario, permitiéndonos así enfocarnos en la implementación del modelo. 
+Se utilizó el \textit{framework} Arena para realizar la interfaz de usuario del simulador porque es una herramienta de código abierto que se utiliza en la materia \ui. Al poder ser combinado con \textbf{Scala} nos pareció una buena oportunidad de explotar lo que nos ofrecía para simplificar la definición de la interfaz de usuario, permitiéndonos así enfocarnos en la implementación del modelo. 
 
 \item  \textbf{Eclipse.}
-Se eligió utilizar el entorno de programación Eclipse ya que es una herramienta multiplataforma, lo que nos permitió trabajar en diferentes sistemas operativos y con la cual estábamos familiarizadas.  Por otro lado, la comunidad provee pluggins para manejar proyectos para Scala.
+Se eligió utilizar el entorno de programación Eclipse ya que es una herramienta multiplataforma, lo que permitió trabajar en diferentes sistemas operativos. Por otro lado, la comunidad provee pluggins para manejar proyectos para Scala.
 
 \item  \textbf{Git}
-Elegimos git como repositorio externo para trabajar colaborativamente durante el desarrollo, dado que es una herramienta que muy extendida en los desarrollos de software libre.
+Se eligió \textit{git} como repositorio externo para trabajar colaborativamente durante el desarrollo, dado que es una herramienta que muy extendida en los desarrollos de software libre.
 
 \end{itemize}
 
@@ -91,20 +95,20 @@ Elegimos git como repositorio externo para trabajar colaborativamente durante el
 \subsubsection{ALU}
 Como se observa en la figura \ref{ALU} la ALU tiene toda la responsabilidad en la ejecución de operaciones matemáticas y lógicas, además del cómputo de los flags luego de cada operación. 
 
-\graf{ALU}{Diagrama de clase de la \ALU}
+\graf[9cm]{ALU}{Diagrama de clase de la \ALU}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Bus de entrada y salida, memoria y puertos}
 Como se observa en la figura \ref{BusEntradaSalida_Memoria_CeldasPuertos} el Bus de entrada y salida tiene la responsabilidad de derivar según donde corresponda (Memoria o Puertos) la escritura o lectura de un dato. Para ello conoce a una instancia de la clase Memoria y a otra de la clase CeldasPuertos. 
 Ambas clases conocen una colección de instancias de la clase Celda, y cada Celda a su vez conoce un dato: una instancia de la clase W16 que representa al dato almacenado en una celda de memoria o en un puerto.  
 
-\graf{BusEntradaSalida_Memoria_CeldasPuertos}{Diagrama de las clases del la BusEntradaSalida, Memoria, CeldasPuertos y Celda}
+\graf[14cm]{BusEntradaSalida_Memoria_CeldasPuertos}{Diagrama de las clases del la BusEntradaSalida, Memoria, CeldasPuertos y Celda}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{CPU}
 Como se observa en la figura \ref{CPU}, la CPU conoce a la ALU, contiene los registros IR y PC, los flags (V,Z,C,N) y los ocho registros de uso general (R0...R7). La responsabilidad de la CPU es actualizar los flags, los registros, actualizar el PC y el IR, y ser la conexión con la ALU.
 
-\graf{CPU}{Diagrama de clase de la CPU}
+\graf[14cm]{CPU}{Diagrama de clase de la CPU}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Intérprete} \label{claseinterprete}
@@ -190,7 +194,7 @@ Como se observa en la figura \ref{Instruccion_DosOperandos} la jerarquía de cla
 
 Como se observa en la figura \ref{Programa} la clase Programa conoce un grupo de Instrucciones (las instrucciones que lo componen). Las instancias son creadas por el \textit{parser} (ver sección \ref{parser}), luego se calculan las etiquetas (si es que las tiene) y finalmente cuando es cargado en memoria la instancia de programa es desechada ya que no vuelve a usarse en ningún momento de la ejecución.
 
-\graf{Programa}{Diagrama de clase de la Programa}
+\graf[10cm]{Programa}{Diagrama de clase de la Programa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Simulador}
