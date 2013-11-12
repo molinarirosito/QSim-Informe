@@ -17,8 +17,8 @@ La funcionalidad del simulador puede caracterizarse mediante las siguientes part
 \subsection{Chequeo de sintaxis}\label{parser}
 
 El simulador provee al alumno de un editor de texto en el cual escribirá el programa en un lenguaje Qi, que desea cargar en memoria y ejecutar.
-Una vez que el usuario haya terminado la escritura, al momento de cargar el programa, el simulador utilizará un \textit{parser}\footnote{Un parser (o analizador sintáctico) es una de las partes del compilador que transforma su entrada de texto plano en este caso a objetos del modelo.} para detectar errores de sintaxis, tales como la falta de una coma o un corchete, o la presencia de símbolos que no pertenecen al lenguaje (como por ejemplo signos de pregunta y símbolos matemáticos); o bien errores semánticos como la combinación incorrecta de elementos del lenguaje, por ejemplo: modos de direccionamiento mal ubicados.
-El parser solo revisará lo escrito por el alumno y de acuerdo a las gramática del lenguaje, mostrará alguno de los siguientes estados:
+Una vez que el usuario haya terminado la escritura, al momento de cargar el programa, el simulador utilizará un \textit{parser}\footnote{Un \textit{parser} (o analizador sintáctico) es una de las partes del compilador que transforma su entrada de texto plano en este caso a objetos del modelo.} para detectar errores de sintaxis, tales como la falta de una coma o un corchete, o la presencia de símbolos que no pertenecen al lenguaje (como por ejemplo signos de pregunta y símbolos matemáticos); o bien errores semánticos como la combinación incorrecta de elementos del lenguaje, por ejemplo: modos de direccionamiento mal ubicados.
+El \textit{parser} solo revisará lo escrito por el alumno y de acuerdo a las gramática del lenguaje, mostrará alguno de los siguientes estados:
 
 \begin{description}
 \item[OK] Este mensaje se obtiene cuando no hubo ningún error de sintaxis. Si se da este resultado, es posible continuar con el ensamblado y cargado en memoria.
@@ -116,7 +116,7 @@ Como se observa en la figura \ref{Interprete} el Interprete es un \textit{single
 \subsubsection{Modos de direccionamiento y W16}
 
 Esta jerarquía de clases permite controlar el acceso a los operandos, mediante un objeto ModoDireccionamiento que controla el acceso a un objeto W16, que es quien contiene el valor propiamente dicho. 
-Como se observa en la figura \ref{ModoDireccionamiento} los modos de direccionamiento extienden del \textit{trait (un tipo abstracto, utilizado como modelo para estructurar programas orientados a objetos) ModoDireccionamiento, donde se encuentran declarados mensajes necesarios para manejar todas las subclases de manera polimórfica. Entre estos mensajes podemos enumerar:
+Como se observa en la figura \ref{ModoDireccionamiento} los modos de direccionamiento extienden del \textit{trait}\footnote{\textit{Trait:} un tipo abstracto, utilizado como modelo para estructurar programas orientados a objetos} ModoDireccionamiento, donde se encuentran declarados mensajes necesarios para manejar todas las subclases de manera polimórfica. Entre estos mensajes podemos enumerar:
 \begin{itemize}
 \item  \textbf{representacionString:}
 Devuelve la representación en string como código fuente, por ejemplo la representación de un objeto
