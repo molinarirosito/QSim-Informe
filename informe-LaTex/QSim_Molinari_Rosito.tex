@@ -1,9 +1,21 @@
 \documentclass[11pt,a4paper]{book}
 \usepackage{Qsim}
 
-\author{\susi \and \tati}
-\title{\includegraphics[width=8cm]{logo}\\Simulador de Arquitecturas Q}
 
+
+\newcommand{\myTIPTitle}{\includegraphics[width=8cm]{logo}}
+\newcommand{\myTIPSubtitle}{Simulador de Arquitecturas Q}
+
+\newcommand{\myTIPFirstAuthor}{\susi}
+\newcommand{\myTIPSecondAuthor}{\tati}
+
+\newcommand{\myTIPSubject}{Construcción de un simulador para la materia \orga}
+\newcommand{\myTIPDirector}{María Nieves Dalponte}
+
+\input{Qsim-caratula}
+%\author{\susi \and \tati\\ Directora: María Nieves Dalponte}
+%\title{Universidad Nacional de Quilmes \\ Departamento de Ciencia y Tecnología\\\tpi\\
+%\\\textbf{Simulador de Arquitecturas Q}\\Trabajo de inserción profesional}
 
 \pagestyle{fancy}
 \fancyhead{} % limpio la cabecera\nouppercase{\rightmark}
@@ -18,7 +30,7 @@
 \fancyfoot[R]{}
 
 \begin{document}
-\maketitle
+\makeCaratulaTIP
 
 %\newpage
 \input{introduccion}

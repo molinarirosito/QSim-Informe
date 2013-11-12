@@ -36,10 +36,11 @@
 \BOOKMARK [2][-]{subsection.Alph1.3.4}{Instrucciones sin operandos}{section.Alph1.3}% 36
 \BOOKMARK [2][-]{subsection.Alph1.3.5}{Instrucciones de salto condicional \(falta revisar Mara\)}{section.Alph1.3}% 37
 \BOOKMARK [0][-]{appendix.Alph2}{Como utilizar el simulador}{}% 38
-\BOOKMARK [1][-]{subsection.Alph2.0.6}{Agregar archivos}{appendix.Alph2}% 39
-\BOOKMARK [2][-]{subsection.Alph2.0.7}{Ensamblar}{subsection.Alph2.0.6}% 40
-\BOOKMARK [2][-]{subsection.Alph2.0.8}{Cargar en memoria}{subsection.Alph2.0.6}% 41
-\BOOKMARK [2][-]{subsection.Alph2.0.9}{Ciclo de instruccion}{subsection.Alph2.0.6}% 42
-\BOOKMARK [2][-]{subsection.Alph2.0.10}{Visualizaci\363n de puertos}{subsection.Alph2.0.6}% 43
-\BOOKMARK [1][-]{section.Alph2.1}{Repositorios remotos del c\363digo de la aplicaci\363n}{appendix.Alph2}% 44
-\BOOKMARK [0][-]{appendix.Alph3}{Errores comunes}{}% 45
+\BOOKMARK [1][-]{section.Alph2.1}{Arranque del Simulador QSim}{appendix.Alph2}% 39
+\BOOKMARK [1][-]{section.Alph2.2}{Agregar archivos}{appendix.Alph2}% 40
+\BOOKMARK [1][-]{section.Alph2.3}{Ensamblar}{appendix.Alph2}% 41
+\BOOKMARK [1][-]{section.Alph2.4}{Cargar en memoria}{appendix.Alph2}% 42
+\BOOKMARK [1][-]{section.Alph2.5}{Ciclo de instruccion}{appendix.Alph2}% 43
+\BOOKMARK [1][-]{section.Alph2.6}{Visualizaci\363n de puertos}{appendix.Alph2}% 44
+\BOOKMARK [1][-]{section.Alph2.7}{Repositorios remotos del c\363digo de la aplicaci\363n}{appendix.Alph2}% 45
+\BOOKMARK [0][-]{appendix.Alph3}{Errores comunes de sintaxis}{}% 46
