@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{Int\IeC {\'e}rprete}{20}{section*.7}
 \contentsline {subsubsection}{Modos de direccionamiento y W16}{20}{section*.8}
 \contentsline {subsubsection}{Instrucciones}{22}{section*.9}
-\contentsline {subsubsection}{Programa}{23}{section*.10}
+\contentsline {subsubsection}{Programa}{24}{section*.10}
 \contentsline {subsubsection}{Simulador}{24}{section*.11}
 \contentsline {chapter}{\numberline {3}Evaluaci\IeC {\'o}n del desarrollo}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}Dificultades encontradas}{27}{section.3.1}

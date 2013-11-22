@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.6.10)  12 NOV 2013 15:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.11.18)  22 NOV 2013 13:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **QSim_Molinari_Rosito.tex
 (./QSim_Molinari_Rosito.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
-aded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ga
+lician, catalan, spanish, loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
@@ -253,12 +253,6 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-
-Package babel Warning: No hyphenation patterns were loaded for
-(babel)                the language `Spanish'
-(babel)                I will use the patterns loaded for \language=0 instead.
-
-\l@spanish = a dialect from \language0
 \es@datefmt=\count89
 \es@quottoks=\toks16
 \es@quotdepth=\count90
@@ -266,7 +260,8 @@ Package babel Info: Making " an active character on input line 496.
 Package babel Info: Making . an active character on input line 599.
 Package babel Info: Making < an active character on input line 644.
 Package babel Info: Making > an active character on input line 644.
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
@@ -620,12 +615,12 @@ Package pdftex.def Info: logo.pdf used on input line 1.
 
 ]
 Underfull \hbox (badness 1571) in paragraph at lines 9--9
-[]\OT1/cmr/m/n/10.95 Una de las primeras asig-nat-uras que debe
+[]\OT1/cmr/m/n/10.95 Una de las pri-me-ras asig-na-tu-ras que de-be
  []
 
 
 Underfull \hbox (badness 4739) in paragraph at lines 9--9
-\OT1/cmr/m/n/10.95 ver-si-taria en Pro-gra-maci^^Son In-form^^Satica es
+\OT1/cmr/m/n/10.95 ver-si-ta-ria en Pro-gra-ma-ci^^Son In-form^^Sati-ca es
  []
 
 
@@ -668,6 +663,11 @@ Package pdftex.def Info: logo.pdf used on input line 40.
  [6] (./contexto.tex
 Cap\'{\i }tulo 1.
 
+Overfull \hbox (2.4412pt too wide) in paragraph at lines 3--3
+[]\OT1/cmr/bx/n/14.4 Sobre la ma-te-ria Or-ga-ni-za-ci^^Son de Compu-tado-
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
@@ -697,11 +697,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-LaTeX Info: Redefining \. on input line 26.
-LaTeX Info: Redefining \% on input line 26.
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
 File: logo.pdf Graphic file (type pdf)
 <use logo.pdf>
-Package pdftex.def Info: logo.pdf used on input line 26.
+Package pdftex.def Info: logo.pdf used on input line 25.
 (pdftex.def)             Requested size: 56.9055pt x 21.21997pt.
  [8]
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
@@ -728,11 +728,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-LaTeX Info: Redefining \. on input line 38.
-LaTeX Info: Redefining \% on input line 38.
+LaTeX Info: Redefining \. on input line 37.
+LaTeX Info: Redefining \% on input line 37.
 File: logo.pdf Graphic file (type pdf)
 <use logo.pdf>
-Package pdftex.def Info: logo.pdf used on input line 38.
+Package pdftex.def Info: logo.pdf used on input line 37.
 (pdftex.def)             Requested size: 56.9055pt x 21.21997pt.
  [9]
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
@@ -837,12 +837,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
-
-Overfull \hbox (0.19585pt too wide) in paragraph at lines 56--57
-[]\OT1/cmr/m/n/10.95 Si la eje-cu-ci^^Son pa-so a pa-so ex-cede los l^^S^^Pmite
-s del pro-gra-ma, pueden
- []
-
 LaTeX Info: Redefining \. on input line 58.
 LaTeX Info: Redefining \% on input line 58.
 File: logo.pdf Graphic file (type pdf)
@@ -890,7 +884,7 @@ File: logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: logo.pdf used on input line 116.
 (pdftex.def)             Requested size: 56.9055pt x 21.21997pt.
  [19 <./ALU.pdf>]
-<Interprete.pdf, id=399, 816.17422pt x 266.9975pt>
+<Interprete.pdf, id=400, 816.17422pt x 266.9975pt>
 File: Interprete.pdf Graphic file (type pdf)
  <use Interprete.pdf>
 Package pdftex.def Info: Interprete.pdf used on input line 117.
@@ -911,8 +905,8 @@ pdfTeX warning: pdflatex (file ./CPU.pdf): PDF inclusion: multiple pdfs with pa
 ge group included in a single page
 >]
 Overfull \hbox (11.84485pt too wide) in paragraph at lines 125--128
-\OT1/cmr/m/n/10.95 c^^Sodi-go fuente, por ejem-p-lo la rep-re-sentaci^^Son de u
-n ob-je-to \OT1/cmr/bx/n/10.95 ADD(R0,R7)\OT1/cmr/m/n/10.95 ,
+\OT1/cmr/m/n/10.95 c^^Sodi-go fuen-te, por ejem-plo la re-pre-sen-ta-ci^^Son de
+ un ob-je-to \OT1/cmr/bx/n/10.95 ADD(R0,R7)\OT1/cmr/m/n/10.95 ,
  []
 
 
@@ -920,24 +914,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-<ModoDireccionamiento.pdf, id=415, 1238.37656pt x 541.39766pt>
+<ModoDireccionamiento.pdf, id=418, 1238.37656pt x 541.39766pt>
 File: ModoDireccionamiento.pdf Graphic file (type pdf)
 
 <use ModoDireccionamiento.pdf>
 Package pdftex.def Info: ModoDireccionamiento.pdf used on input line 146.
 (pdftex.def)             Requested size: 426.79134pt x 186.58412pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 153.
-LaTeX Info: Redefining \% on input line 153.
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
 File: logo.pdf Graphic file (type pdf)
-<use logo.pdf>
-Package pdftex.def Info: logo.pdf used on input line 153.
+ <use logo.pdf>
+Package pdftex.def Info: logo.pdf used on input line 146.
 (pdftex.def)             Requested size: 56.9055pt x 21.21997pt.
  [21 <./Interprete.pdf>]
-<Instruccion.pdf, id=423, 926.6921pt x 489.32813pt>
+<Instruccion.pdf, id=427, 926.6921pt x 489.32813pt>
 File: Instruccion.pdf Graphic file (type pdf)
  <use Instruccion.pdf>
 Package pdftex.def Info: Instruccion.pdf used on input line 161.
@@ -946,7 +936,7 @@ Package pdftex.def Info: Instruccion.pdf used on input line 161.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Instruccion_SinOperandos.pdf, id=425, 282.93204pt x 209.6081pt>
+<Instruccion_SinOperandos.pdf, id=429, 282.93204pt x 209.6081pt>
 File: Instruccion_SinOperandos.pdf Graphic file (type pdf)
 
 <use Instruccion_SinOperandos.pdf>
@@ -956,14 +946,14 @@ Package pdftex.def Info: Instruccion_SinOperandos.pdf used on input line 166.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
 File: logo.pdf Graphic file (type pdf)
 <use logo.pdf>
-Package pdftex.def Info: logo.pdf used on input line 177.
+Package pdftex.def Info: logo.pdf used on input line 173.
 (pdftex.def)             Requested size: 56.9055pt x 21.21997pt.
  [22 <./ModoDireccionamiento.pdf>]
-<Instruccion_UnOperando.pdf, id=438, 1335.61484pt x 635.07263pt>
+<Instruccion_UnOperando.pdf, id=441, 1335.61484pt x 635.07263pt>
 File: Instruccion_UnOperando.pdf Graphic file (type pdf)
 
 <use Instruccion_UnOperando.pdf>
@@ -973,7 +963,7 @@ Package pdftex.def Info: Instruccion_UnOperando.pdf used on input line 178.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Instruccion_DosOperandos.pdf, id=440, 1547.0297pt x 656.8289pt>
+<Instruccion_DosOperandos.pdf, id=443, 1547.0297pt x 656.8289pt>
 File: Instruccion_DosOperandos.pdf Graphic file (type pdf)
 
 <use Instruccion_DosOperandos.pdf>
@@ -993,7 +983,7 @@ Package pdftex.def Info: logo.pdf used on input line 196.
 
 pdfTeX warning: pdflatex (file ./Instruccion_SinOperandos.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
->] <Programa.pdf, id=454, 859.46094pt x 380.79765pt>
+>] <Programa.pdf, id=456, 859.46094pt x 380.79765pt>
 File: Programa.pdf Graphic file (type pdf)
  <use Programa.pdf>
 Package pdftex.def Info: Programa.pdf used on input line 197.
@@ -1007,7 +997,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
-<simulador.pdf, id=457, 1169.49422pt x 447.37138pt>
+<simulador.pdf, id=459, 1169.49422pt x 447.37138pt>
 File: simulador.pdf Graphic file (type pdf)
  <use simulador.pdf>
 Package pdftex.def Info: simulador.pdf used on input line 206.
@@ -1128,12 +1118,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
  []
 
 [35]
-Overfull \hbox (1.8254pt too wide) in paragraph at lines 51--54
-[]\OT1/cmr/m/n/10.95 Ejemplos: \OT1/cmr/bx/n/10.95 [R0] \OT1/cmr/m/n/10.95 de-n
-o-ta un operan-do al-ma-ce-na-do en una cel-da de memo-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
@@ -1186,12 +1170,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
-
-Overfull \hbox (2.0792pt too wide) in paragraph at lines 166--167
-[]\OT1/cmr/m/n/10.95 El efec-to de cualquier salto condi-cional es au-men-tar e
-l PC (Pro-gram Counter)
- []
-
 LaTeX Info: Redefining \. on input line 177.
 LaTeX Info: Redefining \% on input line 177.
 File: logo.pdf Graphic file (type pdf)
@@ -1212,7 +1190,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<ventana_cargado.jpg, id=590, 542.025pt x 302.63063pt>
+<ventana_cargado.jpg, id=594, 542.025pt x 302.63063pt>
 File: ventana_cargado.jpg Graphic file (type jpg)
 
 <use ventana_cargado.jpg>
@@ -1221,7 +1199,7 @@ Package pdftex.def Info: ventana_cargado.jpg used on input line 33.
  [41
 
 ]
-<ventana_cargado_ensamblar.jpg, id=596, 542.025pt x 303.38344pt>
+<ventana_cargado_ensamblar.jpg, id=600, 542.025pt x 303.38344pt>
 File: ventana_cargado_ensamblar.jpg Graphic file (type jpg)
 
 <use ventana_cargado_ensamblar.jpg>
@@ -1231,7 +1209,7 @@ Package pdftex.def Info: ventana_cargado_ensamblar.jpg used on input line 38.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ventana_cargado_cargarenmemoria.jpg, id=598, 542.025pt x 304.88907pt>
+<ventana_cargado_cargarenmemoria.jpg, id=602, 542.025pt x 304.88907pt>
 File: ventana_cargado_cargarenmemoria.jpg Graphic file (type jpg)
 
 <use ventana_cargado_cargarenmemoria.jpg>
@@ -1249,7 +1227,7 @@ File: logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: logo.pdf used on input line 47.
 (pdftex.def)             Requested size: 56.9055pt x 21.21997pt.
  [42 <./ventana_cargado.jpg>]
-<ventana_ejecucion.jpg, id=607, 999.735pt x 504.38437pt>
+<ventana_ejecucion.jpg, id=611, 999.735pt x 504.38437pt>
 File: ventana_ejecucion.jpg Graphic file (type jpg)
 
 <use ventana_ejecucion.jpg>
@@ -1264,7 +1242,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-<ventana_ejecucion_fech.jpg, id=614, 999.735pt x 504.38437pt>
+<ventana_ejecucion_fech.jpg, id=618, 999.735pt x 504.38437pt>
 File: ventana_ejecucion_fech.jpg Graphic file (type jpg)
 
 <use ventana_ejecucion_fech.jpg>
@@ -1274,7 +1252,7 @@ Package pdftex.def Info: ventana_ejecucion_fech.jpg used on input line 52.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ventana_ejecucion_decode.jpg, id=615, 999.735pt x 504.38437pt>
+<ventana_ejecucion_decode.jpg, id=619, 999.735pt x 504.38437pt>
 File: ventana_ejecucion_decode.jpg Graphic file (type jpg)
 
 <use ventana_ejecucion_decode.jpg>
@@ -1284,7 +1262,7 @@ Package pdftex.def Info: ventana_ejecucion_decode.jpg used on input line 53.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ventana_ejecucion_execute.jpg, id=616, 999.735pt x 504.38437pt>
+<ventana_ejecucion_execute.jpg, id=620, 999.735pt x 504.38437pt>
 File: ventana_ejecucion_execute.jpg Graphic file (type jpg)
 
 <use ventana_ejecucion_execute.jpg>
@@ -1294,7 +1272,7 @@ Package pdftex.def Info: ventana_ejecucion_execute.jpg used on input line 54.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<ventana_puertos.jpg, id=618, 284.56313pt x 201.00093pt>
+<ventana_puertos.jpg, id=622, 284.56313pt x 201.00093pt>
 File: ventana_puertos.jpg Graphic file (type jpg)
 
 <use ventana_puertos.jpg>
@@ -1394,13 +1372,13 @@ Package rerunfilecheck Info: File `QSim_Molinari_Rosito.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
  ) 
 Here is how much of TeX's memory you used:
- 7726 strings out of 495059
- 106278 string characters out of 3182030
- 200985 words of memory out of 3000000
- 10571 multiletter control sequences out of 15000+200000
- 15829 words of font info for 60 fonts, out of 3000000 for 9000
- 16 hyphenation exceptions out of 8191
- 36i,14n,45p,1682b,630s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 7727 strings out of 494997
+ 106289 string characters out of 3180091
+ 200998 words of memory out of 3000000
+ 10578 multiletter control sequences out of 15000+200000
+ 16176 words of font info for 61 fonts, out of 3000000 for 9000
+ 42 hyphenation exceptions out of 8191
+ 36i,13n,45p,1682b,630s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -1413,10 +1391,10 @@ fonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on QSim_Molinari_Rosito.pdf (53 pages, 3953839 bytes).
+Output written on QSim_Molinari_Rosito.pdf (53 pages, 3954718 bytes).
 PDF statistics:
- 770 PDF objects out of 1000 (max. 8388607)
- 664 compressed objects within 7 object streams
- 193 named destinations out of 1000 (max. 500000)
+ 774 PDF objects out of 1000 (max. 8388607)
+ 668 compressed objects within 7 object streams
+ 195 named destinations out of 1000 (max. 500000)
  484 words of extra memory for PDF output out of 10000 (max. 10000000)
 
