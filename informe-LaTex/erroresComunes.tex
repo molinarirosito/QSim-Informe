@@ -50,7 +50,7 @@ CMP R3, [0xA000]
 MOV R4 R0 
 \end{verbatim}
 
-En la línea numero 2 entre los operandos no se encuentra la coma que los separa (La sintáxis de las instrucciones de dos operandos especifica que debe haber una coma separando los operandos.). Cuando se quiera ensamblar este programa, el ensamblador detectará este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
+En la línea numero 2 entre los operandos no se encuentra la coma que los separa (La sintaxis de las instrucciones de dos operandos especifica que debe haber una coma separando los operandos.). Cuando se quiera ensamblar este programa, el ensamblador detectará este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
 
 \mensaje{Ha ocurrido un error en la linea 2 : MOV R4, R0} 
 
@@ -61,7 +61,7 @@ sub [[0x0004]], [0xA000]
 ADD R4, R0
 \end{verbatim}
 
-En la linea numero 1 la instrucción sub esta escrita en minúscula esto es inválido (La sintáxis define que los nombres de las instrucciones son estrictamente en mayúscula). Cuando se quiera ensamblar este programa, el ensamblador detectará este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
+En la linea numero 1 la instrucción sub esta escrita en minúscula esto es inválido (La sintaxis define que los nombres de las instrucciones son estrictamente en mayúscula). Cuando se quiera ensamblar este programa, el ensamblador detectará este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
 
 \mensaje{Ha ocurrido un error en la linea 1: sub [[0x0004]], [0xA000]}
 
@@ -72,7 +72,7 @@ MUL [R6], r4
 ADD [0xF0F0], R0
 \end{verbatim}
 
-En la linea numero 1 el operando origen es un registro escrito con minúscula, esto es inválido(La sintáxis define que los registros empiezan estrictamente con 'R'' mayúscula). Cuando se quiera ensamblar este programa, el ensamblador detectara este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
+En la linea numero 1 el operando origen es un registro escrito con minúscula, esto es inválido(La sintaxis define que los registros empiezan estrictamente con 'R'' mayúscula). Cuando se quiera ensamblar este programa, el ensamblador detectara este error y en la pantalla se mostrará mediante un pop-up el siguiente mensaje:
 
 \mensaje{Ha ocurrido un error en la linea 1: MUL [R6], r4} 
 

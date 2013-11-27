@@ -76,7 +76,7 @@ Todas las instrucciones alteran los flags excepto MOV, CALL, RET, JMP y los salt
 A continuación se muestra la codificación (formato) de las instrucciones de dos operandos:
 
 \formatoinstr{|c|c|c|c|c|c|}{
-Codigo de Operación  & \mdest{}& \msrc{}  & \dest{} & \src{}\\
+Código de Operación  & \mdest{}& \msrc{}  & \dest{} & \src{}\\
 (4b)     &   (6b)  &  (6b)   &  (16b)  &  (16b)} 
 
 
@@ -102,7 +102,7 @@ Esta instrucción describe la copia de datos del dato alojado en el operando ori
 Esta instrucción describe la conjunción bit a bit entre los datos de los dos operandos. El resultado de la ejecución de esta operación es guardado en el operando destino.
 
 \item  \mostrarinst{CMP destino, origen}{0110}\\
-Esta instrucción describe la resta entre dos operandos, sin guardar el resultado. Su único efecto es la actualización de flags en la cpu.
+Esta instrucción describe la resta entre dos operandos, sin guardar el resultado. Su único efecto es la actualización de flags en la CPU.
 
 \item  \mostrarinst{OR destino, origen}{0101}\\
 Esta instrucción describe la disyunción bit a bit entre los datos de los dos operandos. El resultado de la ejecución de esta operación es guardado en el operando destino.
@@ -167,10 +167,10 @@ El efecto de cualquier salto condicional es aumentar el PC (Program Counter) en 
 
 \begin{enumerate}
 \item  \mostrarinst{JE desplazamiento}{0001}\\
-La condición del salto es que el flag \textbf{Z} (Cero) sea 1, es decir la ultima operación matemática dió como resultado el número cero.
+La condición del salto es que el flag \textbf{Z} (Cero) sea 1, es decir la ultima operación matemática dio como resultado el número cero.
 
 \item  \mostrarinst{JNE desplazamiento}{1001}\\
-La condición del salto es que el flag \textbf{Z} (Cero) sea 0, es decir la ultima operación matemática no dió como resultado el número cero.
+La condición del salto es que el flag \textbf{Z} (Cero) sea 0, es decir la ultima operación matemática no dio como resultado el número cero.
 
 \item  \mostrarinst{JLE desplazamiento}{0010}\\
 La condición del salto es el resultado de la siguiente operación lógica \textbf{Z OR ( N XOR V )}, es decir la ultima operación matemática es menor o igual con signo.
