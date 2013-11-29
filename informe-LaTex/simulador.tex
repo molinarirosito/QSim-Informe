@@ -8,7 +8,7 @@ El simulador desarrollado es una herramienta de utilización sencilla ya que se 
 La funcionalidad del simulador puede caracterizarse mediante las siguientes partes importantes:
 
 \begin{itemize}
-\item Chequeo de sintaxis de los programas escritos en un lenguaje Qi
+\item Chequeo de sintaxis de los programas escritos en un lenguaje \qi\
 \item Ensamblado del código fuente de un programa en su correspondiente código máquina
 \item Cargado en memoria del código máquina de un programa
 \item Ejecución paso a paso de un programa cargado en memoria
@@ -16,19 +16,19 @@ La funcionalidad del simulador puede caracterizarse mediante las siguientes part
 
 \subsection{Chequeo de sintaxis}\label{parser}
 
-El simulador provee al alumno de un editor de texto en el cual escribirá el programa en un lenguaje Qi, que desea cargar en memoria y ejecutar.
+El simulador provee al alumno de un editor de texto en el cual escribirá el programa en un lenguaje $Q_i$, que desea cargar en memoria y ejecutar.
 Una vez que el usuario haya terminado la escritura, al momento de cargar el programa, el simulador utilizará un \textit{parser}\footnote{Un \textit{parser} (o analizador sintáctico) es una de las partes del compilador que transforma su entrada de texto plano en este caso a objetos del modelo.} para detectar errores de sintaxis, tales como la falta de una coma o un corchete, o la presencia de símbolos que no pertenecen al lenguaje (como por ejemplo signos de pregunta y símbolos matemáticos); o bien errores semánticos como la combinación incorrecta de elementos del lenguaje, por ejemplo: modos de direccionamiento mal ubicados.
-El \textit{parser} controlará el código escrito por el alumno y de acuerdo a la gramática del lenguaje correspondiente a la versión \qi\ elegida elegido, mostrará alguno de los siguientes estados:
+El \textit{parser} controlará el código escrito por el alumno y de acuerdo a la gramática del lenguaje correspondiente a la versión \qi\ elegida, mostrará alguno de los siguientes estados:
 
 \begin{description}
 \item[OK] Este mensaje se obtiene cuando no hubo ningún error de sintaxis. Si se da este resultado, es posible continuar con el ensamblado y cargado en memoria.
-\item[SyntaxError] Este mensaje de error se obtiene cuando en alguna línea del programa se detectó algún error de sintaxis o de semántica, como se describió arriba. Cuando ocurre este error se lo acompaña con una descripción lo mas detallada posible para que el alumno detecte donde ocurrió y pueda corregirlo. Un programa con errores no puede ser ensamblado y cargado en memoria. Mas detalle de esto puede encontrarse en el apéndice \ref{erroressintaxis}.
+\item[SyntaxError] Este mensaje de error se obtiene cuando en alguna línea del programa se detectó algún error de sintaxis o de semántica, como se describió arriba. Cuando ocurre este error, se lo acompaña con una descripción lo mas detallada posible para que el alumno detecte donde ocurrió y pueda corregirlo. Un programa con errores no puede ser ensamblado y cargado en memoria. Mas detalle de esto puede encontrarse en el apéndice \ref{erroressintaxis}.
 \end{description}
 
 \subsection{Ensamblado}
 
 Una vez que el programa es sintácticamente válido es posible traducir el código fuente del programa en código máquina (representado en cadenas binarias). Para esto se respeta un formato de instrucción que indica cómo se codifica cada operación y los operandos. \\
-Por ejemplo, la una instrucción \codecent{ADD [AAAA],0x000F} suma el valor 15 al contenido de la celda cuya dirección es \code{AAAA}, y el resultado de ensamblar esta celda es el siguiente código máquina: \codecent{0010001000000000 1010101010101010 0000000000001111}
+Por ejemplo, la instrucción \codecent{ADD [AAAA],0x000F} suma el valor 15 al contenido de la celda cuya dirección es \code{AAAA}, y el resultado de ensamblar esta celda es el siguiente código máquina: \codecent{0010001000000000 1010101010101010 0000000000001111}
 
 Mas detalle al respecto de este proceso en el apéndice \ref{apendiceQ}.
 
@@ -38,7 +38,7 @@ Una vez ensamblado, la representación binaria (o código máquina) del programa
 
 Por ejemplo, si el código máquina de una instrucción es:\codecent{0010001000000000 1010101010101010 0000000000001111} entonces durante el cargado en memoria se ocuparán 3 celdas (de 16 bits) consecutivas.
 
-Durante la carga del programa en memoria puede ocurrir que el programa no cuente con el espacio suficiente a partir de la ubicación elegida ya que ocupa más celdas que las que se encuentran disponibles, ya que como se especifica en el apéndice \ref{apendiceQ}, la memoria disponible tiene un tamaño limitado y por este motivo la alocación en memoria del código máquina puede exceder el espacio disponible a partir de la celda inicial anteriormente elegida. Si por el contrario, no se produce este error, el alumno podrá ver el programa cargado en memoria exitosamente.
+Durante la carga del programa en memoria puede ocurrir que el programa no cuente con el espacio suficiente a partir de la ubicación elegida ya que ocupa más celdas que las que se encuentran disponibles, como se especifica en el apéndice \ref{apendiceQ}, la memoria disponible tiene un tamaño limitado y por este motivo la alocación en memoria del código máquina puede exceder el espacio disponible a partir de la celda inicial anteriormente elegida. Si por el contrario, no se produce este error, el alumno podrá ver el programa cargado en memoria exitosamente.
 
 \subsection{Ejecución paso a paso}
 
@@ -85,7 +85,7 @@ Se utilizó el \textit{framework} Arena para realizar la interfaz de usuario del
 Se eligió utilizar el entorno de programación Eclipse ya que es una herramienta multiplataforma, lo que permitió trabajar en diferentes sistemas operativos. Por otro lado, la comunidad provee plugins para manejar proyectos para Scala.
 
 \item  \textbf{Git}
-Se eligió \textit{git} como repositorio externo para trabajar colaborativamente durante el desarrollo, dado que es una herramienta que muy extendida en los desarrollos de software libre.
+Se eligió \textit{git} como repositorio externo para trabajar colaborativamente durante el desarrollo, dado que es una herramienta muy extendida en los desarrollos de software libre.
 
 \end{itemize}
 

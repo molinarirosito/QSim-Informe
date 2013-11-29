@@ -52,7 +52,7 @@
 \contentsline {section}{\numberline {B.2}Agregar archivos}{42}{section.Alph2.2}
 \contentsline {section}{\numberline {B.3}Ensamblar}{42}{section.Alph2.3}
 \contentsline {section}{\numberline {B.4}Cargar en memoria}{42}{section.Alph2.4}
-\contentsline {section}{\numberline {B.5}Ciclo de instruccion}{43}{section.Alph2.5}
+\contentsline {section}{\numberline {B.5}Ciclo de instrucci\IeC {\'o}n}{43}{section.Alph2.5}
 \contentsline {section}{\numberline {B.6}Visualizaci\IeC {\'o}n de puertos}{43}{section.Alph2.6}
 \contentsline {section}{\numberline {B.7}Repositorios remotos del c\IeC {\'o}digo de la aplicaci\IeC {\'o}n}{44}{section.Alph2.7}
 \contentsline {chapter}{\numberline {C}Errores comunes de sintaxis}{47}{appendix.Alph3}
