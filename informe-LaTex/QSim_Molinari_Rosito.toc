@@ -16,14 +16,14 @@
 \contentsline {section}{\numberline {2.2}Implementaci\IeC {\'o}n}{18}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Tecnolog\IeC {\'\i }a utilizada}{18}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Dise\IeC {\~n}o Orientado a Objetos}{19}{subsection.2.2.2}
-\contentsline {subsubsection}{ALU}{19}{section*.4}
-\contentsline {subsubsection}{Bus de entrada y salida, memoria y puertos}{19}{section*.5}
-\contentsline {subsubsection}{CPU}{19}{section*.6}
-\contentsline {subsubsection}{Int\IeC {\'e}rprete}{20}{section*.7}
-\contentsline {subsubsection}{Modos de direccionamiento y W16}{20}{section*.8}
-\contentsline {subsubsection}{Instrucciones}{22}{section*.9}
-\contentsline {subsubsection}{Programa}{24}{section*.10}
-\contentsline {subsubsection}{Simulador}{24}{section*.11}
+\contentsline {subsubsection}{ALU}{19}{section*.5}
+\contentsline {subsubsection}{Bus de entrada y salida, memoria y puertos}{19}{section*.6}
+\contentsline {subsubsection}{CPU}{19}{section*.7}
+\contentsline {subsubsection}{Int\IeC {\'e}rprete}{20}{section*.8}
+\contentsline {subsubsection}{Modos de direccionamiento y W16}{20}{section*.9}
+\contentsline {subsubsection}{Instrucciones}{22}{section*.10}
+\contentsline {subsubsection}{Programa}{24}{section*.11}
+\contentsline {subsubsection}{Simulador}{24}{section*.12}
 \contentsline {chapter}{\numberline {3}Evaluaci\IeC {\'o}n del desarrollo}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}Dificultades encontradas}{27}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Dificultades presentadas por el dominio}{27}{subsection.3.1.1}
@@ -33,9 +33,9 @@
 \contentsline {subsection}{\numberline {3.2.2}Ensamblado}{29}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Decodificaci\IeC {\'o}n}{29}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Ejecuci\IeC {\'o}n}{30}{subsection.3.2.4}
-\contentsline {subsubsection}{Operaciones de ALU}{30}{section*.12}
-\contentsline {subsubsection}{B\IeC {\'u}squeda de Operandos}{31}{section*.13}
-\contentsline {subsubsection}{Almacenamiento de Operandos}{31}{section*.14}
+\contentsline {subsubsection}{Operaciones de ALU}{30}{section*.13}
+\contentsline {subsubsection}{B\IeC {\'u}squeda de Operandos}{31}{section*.14}
+\contentsline {subsubsection}{Almacenamiento de Operandos}{31}{section*.15}
 \contentsline {section}{\numberline {3.3}Ejemplos de uso}{31}{section.3.3}
 \contentsline {section}{\numberline {3.4}Trabajo Futuro}{32}{section.3.4}
 \contentsline {chapter}{\numberline {A}Especificaci\IeC {\'o}n de la arquitectura Q}{35}{appendix.Alph1}
@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {A.3.2}Instrucciones de 1 operando origen}{38}{subsection.Alph1.3.2}
 \contentsline {subsection}{\numberline {A.3.3}Instrucciones de 1 operando destino}{39}{subsection.Alph1.3.3}
 \contentsline {subsection}{\numberline {A.3.4}Instrucciones sin operandos}{39}{subsection.Alph1.3.4}
-\contentsline {subsection}{\numberline {A.3.5}Instrucciones de salto condicional (falta revisar Mara)}{39}{subsection.Alph1.3.5}
+\contentsline {subsection}{\numberline {A.3.5}Instrucciones de salto condicional}{39}{subsection.Alph1.3.5}
 \contentsline {chapter}{\numberline {B}Como utilizar el simulador}{41}{appendix.Alph2}
 \contentsline {section}{\numberline {B.1}Arranque del Simulador QSim}{41}{section.Alph2.1}
 \contentsline {section}{\numberline {B.2}Agregar archivos}{42}{section.Alph2.2}
