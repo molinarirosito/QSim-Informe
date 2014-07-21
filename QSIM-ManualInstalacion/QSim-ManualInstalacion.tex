@@ -11,6 +11,9 @@
 \date{}
 
 
+\newcommand{\lnx}{GNU/Linux}
+
+\newcommand{\zip}{qsim.zip}
 
 \pagestyle{fancy}
 \fancyhead{} % limpio la cabecera\
@@ -27,6 +30,67 @@
 \maketitle
 \tableofcontents
 
-%\input{howto}
+\section{Pre-requisitos}
+
+\subsection{Para ejecutar en  \lnx}
+
+Para ejecutar el simulador en el sistema operativo \lnx\ es necesario tener instalada la versión 7 del Java Runtime Environment. Para instalarla:
+\begin{enumerate}
+\item Abrir una terminal con la combinación de teclas \code{Ctrl+Alt+t}
+\item Ejecutar \underline{en la terminal} el siguiente comando (que se puede pegar en la terminal usando el mouse):
+\begin{verbatim}
+sudo apt-get install openjdk-7-jre
+\end{verbatim}
+\item Ingresar la contraseña del usuario
+\end{enumerate}
+
+\subsection{Para ejecutar en Windows}
+
+En construcción...
+
+\section{Arranque del Simulador QSim}
+
+El archivo comprimido \code{\zip} incluye dos archivos ejecutables, uno para cada posible sistema operativo, a saber:
+
+\begin{itemize}
+\item El script de arranque \code{qsim.sh} para \lnx\
+\item El script de arranque \code{qsim.bat} para Windows
+\end{itemize}
+
+
+
+%--------------------------------------------------------------------------------------------
+
+\subsection{Ejecución de \qsim\ en \lnx}
+
+El script de arranque \code{qsim.sh} está preparado para una arquitectura de 32 bits. 
+
+\begin{enumerate}
+\item Abrir una terminal con la combinación de teclas \code{Ctrl+Alt+t}
+\item Ubicarse en la carpeta que contiene los archivos descomprimidos. Si se lo descomprimió en el escritorio, la ruta es \code{Escritorio/ejecutable\_QSim} (dentro de la carpeta home del usuario). \\Para eso \textbf{ingresar el siguiente comando en la terminal}:
+\begin{verbatim}
+cd Escritorio/ejecutable_QSim
+\end{verbatim}
+\item Cambiar los permisos de ejecución sobre el script ingresando el siguiente comando en la terminal
+\begin{verbatim}
+sudo chmod u+x qsim.sh
+\end{verbatim}
+\item \textbf{Si lo pide}, ingresar la contraseña del usuario
+\item Ejecutar el script, ingresando el siguiente comando en la terminal
+\begin{verbatim}
+sh qsim.sh
+\end{verbatim}
+\end{enumerate}
+
+\subsection{Ejecución de \qsim\ en Windows}
+
+ 
+\begin{enumerate}
+\item Abrir la carpeta que contiene los archivos descomprimidos.
+\item Hacer doble clic sobre el script de arranque \code{qsim.bat}
+\end{enumerate}
+
+
+\graf{qsim-pantallaPpal}{Pantalla inicial de \qsim}
 
 \end{document}

@@ -1,0 +1,7 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Pre-requisitos}{1}
+\contentsline {subsection}{\numberline {1.1}Para ejecutar en GNU/Linux}{1}
+\contentsline {subsection}{\numberline {1.2}Para ejecutar en Windows}{1}
+\contentsline {section}{\numberline {2}Arranque del Simulador QSim}{2}
+\contentsline {subsection}{\numberline {2.1}Ejecuci\IeC {\'o}n de QSim\ en GNU/Linux}{2}
+\contentsline {subsection}{\numberline {2.2}Ejecuci\IeC {\'o}n de QSim\ en Windows}{2}
