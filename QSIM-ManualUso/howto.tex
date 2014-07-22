@@ -1,66 +1,59 @@
 
+\newcommand{\funAgregar}{Agregar archivos}
+\newcommand{\funEnsamblar}{Ensamblar}
+\newcommand{\funCargar}{Cargar en memoria}
 
-\section{Arranque del Simulador QSim}
-Para poder arrancar el simulador contamos con 2 archivos ejecutables. 
-Dependiendo del sistema operativo en el que estemos utilizamos uno u otro.\\
-
-A Continuación se describirá como se ejecuta el simulador \qsim tanto en Windows como en Linux.
-\begin{itemize}
-
-\item Ejecución \qsim\ en Linux.
-
-En Linux tenemos que fijarnos cuantos bits tiene el sistema operativo (32bits o 64bits). Si es de 32bits, el .jar que tenemos que utilizar para el ejecutable tiene que estar generado en 32bits y a si mismo sucede con el sistema en 64bit. El ejecutable para Linux tiene extensión .sh. El comando para encender el simulador es la siguiente:
-
-\begin{verbatim}
-$ sh qsim.sh
-\end{verbatim}
-
-Este comando se tiene que realizar parándonos en la carpeta descomprimida del ejecutable. 
-A continuación se abre la pantalla principal de Qsim, la cual se muestra mas adelante.
-
-\item Ejecución de \qsim\ en Windows.
-
-En Windows utilizaremos uno de los ejecutables, para ser mas precisos el archivo ejecutable con extensión .bat.
-A dicho archivo le hacemos doble clic para poder encender el simulador que nos lleva a la pantalla principal QSim.
-
- 
-\end{itemize}
-
-\section{Agregar archivos}
-Como se observa en la figura \ref{ventana_cargado}, la ventana de cargado, la misma cuenta con la opción de agregar archivos .qsim y se encuentran deshabilitadas las otras opciones ya que, sin uno o mas programas de la arquitectura Qi carece de sentido realizar la acción de ensamblar o de cargar en memoria.
+\section{Ensamblar y cargar programas .qsim}
+\subsection{Paso 0: Agregar archivos}
+Como se observa en la figura \ref{ventana_cargado} de la ventana principal, se cuenta con la opción de \textbf{\funAgregar} .qsim y están deshabilitadas las otras opciones de \textbf{\funEnsamblar} o de \textbf{\funCargar}.
 \graf{ventana_cargado}{Cargado de archivos}
 
-\section{Ensamblar}
-Como se observa en la figura \ref{ventana_cargado_ensamblar} de la ventana Ensamblar una vez que los programas Qi en los archivos -qsim se encuentran agregados se habilitan las opciones de seleccionar la arquitectura Qi que se desee (Q1.. Q6) y la opción de Ensamblar el programa para que se realice el chequeo de sintaxis y se genere el código máquina que luego será cargado en memoria.
+\subsection{Paso 1: Ensamblar}
+Como se observa en la figura \ref{pantalla_paso0_script} de la ventana principal, una vez que los programas Qi en los archivos .qsim se encuentran agregados se habilitan las opciones para:
+\begin{itemize}
+\item seleccionar la arquitectura Qi que se desee (Q1.. Q6)
+\item ensamblar el programa para que se realice el chequeo de sintaxis y se genere el código máquina (que en el siguiente paso será cargado en memoria).
+\end{itemize}  
 
-\graf{ventana_cargado_ensamblar}{Ensamblar}
+\graf{pantalla_paso0_script}{Ensamblar}
 
-\section{Cargar en memoria}
-Como se observa en la figura \ref{ventana_cargado_cargarenmemoria} de \textit{cargado en memoria} los programas Qi en los archivos .qsim se encuentran ensamblados en la arquitectura Qi elegida.\\
-Para ese entonces todas las opciones están habilitadas ya que puede desearse agregar otro archivo .qsim o quitar alguno (no todos) y volver a ensamblar, o bien, elegir el \PC a partir del cual se quiere cargar en memoria el programa Qi (por defecto '0000') y hacer clic en el botón 'Cargar en memoria'.
-\graf{ventana_cargado_cargarenmemoria}{Cargado en memoria}
+Haciendo clic en el botón \textbf{\funEnsamblar}, se generará el código máquina correspondiente al código fuente de los archivos .qsim, en la arquitectura Qi elegida.
 
-\section{Ciclo de instrucción}
-Como se observa en la figura \ref{ventana_ejecucion} de la ventana de ejecución una vez que el programa es exitosamente cargado en memoria se abre esta nueva ventana que contiene los registro especiales \PC, \IR, \SP, los flags, los registro de uso general (R0...R7), la memoria, una consola de información al usuario y los botones habilitados para realizar el fetch, ver los puertos y editar los valores de los registros especiales, los flags y pc.
+\subsection{Paso 2: Cargar en memoria}
+Como se observa en la figura \ref{pantalla_paso1} de la ventana principal, se tiene habilitado el botón \textbf{\funCargar}. Haciendo clic en dicho botón, se abrirá una nueva ventana para visualizar el contenido de la memoria principal, donde se incluye el código máquina generado en el paso anterior.\\
 
-\graf{ventana_ejecucion}{Ventana de ejecución}
+\graf{pantalla_paso1}{Cargado en memoria}
 
-Para poder realizar el ciclo de ejecución de una instrucción, se debe seguir el orden de las etapas de dicho ciclo al apretar los botones que están debajo en el panel llamado 'Ciclo de ejecución'. De todas maneras como se ve en las figuras \ref{ventana_ejecucion_fech}, \ref{ventana_ejecucion_decode} y \ref{ventana_ejecucion_execute} sólo luego de realizarse el \textit{Fetch}\footnote{búsqueda de la instrucción} a pedido del usuario puede utilizarse el \textit{decode}\footnote{decodificación de la instrucción}, luego el \textit{execute}\footnote{Ejecución de la instrucción} y el ciclo vuelve a repetirse.\\
+Es importante notar que en esta etapa también están habilitadas las funciones de \textbf{\funAgregar} y \textbf{\funEnsamblar} ya que puede  agregarse otro archivo .qsim o quitar alguno (no todos) y volver a ensamblar. Además se puede determinar la celda a partir de la cual se quiere cargar en memoria el código máquina (por defecto se carga a partir de \code{0000}) y por lo tanto cual es el valor inicial del registro \code{PC}.
 
-\graf{ventana_ejecucion_fech}{Ventana de ejecución luego del \textit{fetch}}
-\graf{ventana_ejecucion_decode}{Ventana de ejecución luego del \textit{decode}}
-\graf{ventana_ejecucion_execute}{Ventana de ejecución luego del \textit{execute}}
+\newpage
+%-------------------------------------
+\section{Ejecutar programas .qsim}
+Como se observa en la figura \ref{qsim_pantallaMemoriaSecciones} de la ventana de ejecución, una vez que el programa es cargado en memoria se abre esta nueva ventana que muestra:
+\graf[1.2\textwidth]{qsim_pantallaMemoriaSecciones}{Ventana de ejecución}
+\begin{enumerate}[(a)]
+\item el mapa de memoria
+\item el estado de los registros especiales \PC, \IR, \SP
+\item el estado de los flags
+\item el estado de los registros de uso general (R0...R7)
+\item una consola de información al usuario
+\item los botones para controlar la ejecución paso a paso
+\item los botones para editar registros y ver los puertos
+\end{enumerate}
 
-\section{Visualización de puertos}
-Si se desea ver el valor que tienen los puertos, basta con hacer clic en el botón "Ver puertos", y se abrirá una nueva ventana tal y como se ve en el \textit{screenshot} de la ventana de puertos (figura \ref{ventana_puertos}) donde se podrá observar el número de puerto y su valor actual y también al igual que en la ventana principal seleccionar su edición.
-\graf[6cm]{ventana_puertos}{Ventana de puertos}\\
+Para poder realizar el ciclo de ejecución de una instrucción, se debe seguir en orden las etapas de búsqueda, decodificación y ejecución de la instrucción utilizando los botones del panel \textit{Ciclo de ejecución}.
+
+\graf{pantalla_fetch}{Ventana de ejecución luego de la búsqueda}
+\graf[0.5\textwidth]{consola_decode}{Detalle de la consola luego de la decodificación}
+\graf[0.5\textwidth]{consola_exe1}{Detalle de la consola y los registros luego de la ejecución de la instrucción}
+
+En las figuras \ref{pantalla_fetch}, \ref{consola_decode} y \ref{consola_exe1} se muestra el efecto de cada uno de los pasos. Al comenzar un nuevo ciclo de ejecución, las celdas leídas se muestran en otro color, como se muestra en la figura \ref{detalle_fetch2}.
 
 
-\section{Repositorios remotos del código de la aplicación}
+\graf[0.7\textwidth]{detalle_fetch2}{Detalle de los registros especiales y parte de la memoria luego de la búsqueda de la siguiente instrucción}
 
-\begin{description}
-\item[Código del modelo:]
-https://github.com/molinarirosito/QSim
-\item[Código de la interfaz:]
-https://github.com/molinarirosito/QSim\_UI
-\end{description}
+\subsection{Visualización de puertos de Entrada/Salida}
+
+Si se desea administrar el valor de los puertos, se debe hacer clic en el botón \textit{Ver puertos}, y se abrirá una nueva ventana como se muestra en la figura \ref{pantalla_puertos}. 
+\graf[6cm]{pantalla_puertos}{Ventana de edición de puertos de Entrada/Salida}\\
+
